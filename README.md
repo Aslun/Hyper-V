@@ -7,7 +7,6 @@ Twitter : https://twitter.com/bastlanguedoc
 ## Description
 
 Backup de VM Hyper-VM avec une taux de corruption bas et une réception par e-mail
-PowerShell et SMTP Server
 
 ## Requirements
 

@@ -1,9 +1,6 @@
-     ___         __                                     
-    /   |  _____/ /_  ______                            
-   / /| | / ___/ / / / / __ \                          
-  / ___ |(__  ) / /_/ / / / /                           
- /_/  |_/____/_/\__,_/_/ /_/                            
-                                                       
+
+## Aslun
+
 Développeur multi-platerformes                         
 Twitter : https://twitter.com/bastlanguedoc					   
 

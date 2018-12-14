@@ -11,7 +11,7 @@
 
 #Variable
 $VMName = "NameVM"
-$Destination = "F:\Hyper-v"
+$Destination = "F:\namefolder"
 
 #Comptes mail envoi et réception
 $MailFrom = "usernamehyperv@domaine.com"

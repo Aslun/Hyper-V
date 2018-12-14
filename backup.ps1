@@ -11,7 +11,6 @@
 
 #Variable
 $VMName = "NameVM"
-$Directorytmp = "C:\backuptmp"
 $Destination = "F:\Hyper-v"
 
 #Comptes mail envoi et réception
@@ -43,16 +42,10 @@ Le backup de la VM est fini.
 </html>
 '@
 #Suppression de l'ancien backup
-rm -r -fo $Directorytmp\$VMName\*
 rm -r -fo $Destination\$VMName\*
-#Création du fichier backuo TMP pour la vm
-mkdir $Directorytmp\$VMName\
 #Exportation de la VM via la commande export-vm de Hyper-v
-Export-VM -Name $VMName -Path $Directorytmp
-#xcopy vers le disque F: externe
-xcopy "$Directorytmp\$VMName\*" "$Destination\$VMName\" /e /i
-#Suppression du backup TMP
-rm -r -fo $Directorytmp\$VMName\*
+Export-VM -Name $VMName -Path $Destination
+
 
 #Envoyer le mail de réussite
 $Smtp = New-Object Net.Mail.SmtpClient($SmtpServer,$SmtpPort)

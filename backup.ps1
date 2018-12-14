@@ -1,12 +1,13 @@
 ##########################################################
 #     ___         __                                     #
 #    /   |  _____/ /_  ______                            #
-#   / /| | / ___/ / / / / __ \                          #
+#   / /| | / ___/ / / / / __ \                           #
 #  / ___ |(__  ) / /_/ / / / /                           # 
 # /_/  |_/____/_/\__,_/_/ /_/                            #
 #                                                        #
-# Développeur multi-platerformes                         #
+# Développeur PHP, PS, Python, Sh                        #
 # Twitter : https://twitter.com/bastlanguedoc?lang=fr    #
+# Email : bastien@languedoc.ovh                          #
 ##########################################################
 
 #Variable

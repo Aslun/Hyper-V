@@ -1,11 +1,18 @@
-#     ___         __          
-#    /   |  _____/ /_  ______ 
-#    / /| | / ___/ / / / / __ \
-#  / ___ |(__  ) / /_/ / / / /
-# /_/  |_/____/_/\__,_/_/ /_/ 
-#                             
-# Développeur multi-platerformes
-# Twitter : https://twitter.com/bastlanguedoc?lang=fr
+##########################################################
+#     ___         __                                     #
+#    /   |  _____/ /_  ______                            #
+#    / /| | / ___/ / / / / __ \                          #
+#  / ___ |(__  ) / /_/ / / / /                           # 
+# /_/  |_/____/_/\__,_/_/ /_/                            #
+#                                                        #
+# Développeur multi-platerformes                         #
+# Twitter : https://twitter.com/bastlanguedoc?lang=fr    #
+##########################################################
+
+#Variable
+$VMName = "NameVM"
+$Directorytmp = "C:\backuptmp"
+$Destination = "F:\Hyper-v"
 
 #Comptes mail envoi et réception
 $MailFrom = "usernamehyperv@domaine.com"
@@ -36,16 +43,16 @@ Le backup de la VM est fini.
 </html>
 '@
 #Suppression de l'ancien backup
-rm -r -fo D:\backuptmp\VMANME\*
-rm -r -fo F:\Hyper-V\VMANME\*
+rm -r -fo $Directorytmp\$VMName\*
+rm -r -fo $Destination\$VMName\*
 #Création du fichier backuo TMP pour la vm
-mkdir C:\backuptmp\VMANME\
+mkdir $Directorytmp\$VMName\
 #Exportation de la VM via la commande export-vm de Hyper-v
-Export-VM -Name VMANME -Path D:\backuptmp\
+Export-VM -Name $VMName -Path $Directorytmp
 #xcopy vers le disque F: externe
-xcopy "D:\backuptmp\VMANME\*" "F:\Hyper-V\Routeur" /e /i
+xcopy "$Directorytmp\$VMName\*" "$Destination\$VMName\" /e /i
 #Suppression du backup TMP
-rm -r -fo D:\backuptmp\VMANME\*
+rm -r -fo $Directorytmp\$VMName\*
 
 #Envoyer le mail de réussite
 $Smtp = New-Object Net.Mail.SmtpClient($SmtpServer,$SmtpPort)
